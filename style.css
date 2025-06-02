@@ -554,7 +554,7 @@ nav {
     line-height: 3px;
     font-weight: 500;
     color: #0B132A;
-    padding-bottom: 5px;
+    padding-bottom: 11px;
 }
 
 .rating {
@@ -987,5 +987,9 @@ footer {
 
     .feedback-carousel {
         margin-bottom: 50px;
+    }
+
+    .client-profile h5{
+        padding-bottom: 11px;
     }
 }
