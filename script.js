@@ -18,16 +18,26 @@ $(document).ready(function () {
             {
                 breakpoint: 480,
                 settings: {
-                    slidesToShow: 1
+                    slidesToShow: 1,
                 }
             }
         ]
     });
 
-    $('.mobile-hamburger').click(function () {
-        $('.mobile-nav').toggleClass("show")
-    });
-
 });
 
-console.log("hello world")
+function togglemenu() {
+    var $menu = $('.mobile-nav');
+
+    if ($menu.hasClass('show')) {
+        $menu.removeClass('show');
+        setTimeout(function () {
+            $menu.css('display', 'none');
+        }, 300);
+    } else {
+        $menu.css('display', 'flex');
+        setTimeout(function () {
+            $menu.addClass('show');
+        }, 10);
+    }
+}
