@@ -557,14 +557,6 @@ nav {
     padding-bottom: 5px;
 }
 
-.client-profile span {
-    font-size: 14px;
-    line-height: 30px;
-    font-weight: 400;
-    color: #4F5665;
-}
-
-
 .rating {
     display: flex;
     gap: 10px;
@@ -794,15 +786,21 @@ footer {
 
 .coder {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 59px;
     width: 100%;
+    color: #DDDDDD;
+}
+
+.coder span {
+    font-size: 12px;
+    line-height: 30px;
+    font-weight: 400;
 }
 
 .coder h1 {
     font-size: 12px;
-    color: #DDDDDD;
 }
 
 @media screen and (max-width: 991px) {
@@ -842,7 +840,7 @@ footer {
     }
 
     .slick-slide {
-        margin: 0 8px;
+        margin: 0 13px;
     }
 
     .slick-list {
@@ -852,7 +850,7 @@ footer {
 
     .mobile-hamburger {
         padding: 9px;
-        font-size: 20px;
+        font-size: 30px;
         color: red;
         background-color: #ffff;
         outline: none;
@@ -931,11 +929,11 @@ footer {
     }
 
     .cart {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
     }
 
     .network-section {
-        margin-top: 0;
+        margin-top: 59px;
     }
 
     .map {
@@ -981,5 +979,13 @@ footer {
 
     .feature-detail h4 {
         margin-top: 59px;
+    }
+
+    .carousel-cart p {
+        line-height: 20px;
+    }
+
+    .feedback-carousel {
+        margin-bottom: 50px;
     }
 }
