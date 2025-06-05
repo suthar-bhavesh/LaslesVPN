@@ -102,6 +102,7 @@ nav {
 
 .right-content img {
     width: 100%;
+    height: 100%;
 }
 
 .main-content h1 {
@@ -484,9 +485,9 @@ nav {
 
 }
 
-.slick-list {
-    /* overflow: visible */
-}
+/* .slick-list {
+    overflow: visible
+} */
 
 .carousel-content {
     display: flex;
@@ -571,8 +572,6 @@ nav {
     display: flex;
     margin-top: 60px;
     gap: 20px;
-    /* position: absolute; */
-    /* transform: translateY(-50%) */
     float: right;
 }
 
@@ -803,6 +802,29 @@ footer {
     font-size: 12px;
 }
 
+
+@media screen and (max-width: 1024px) {
+    .vpn-infra {
+        gap: 0;
+    }
+
+    .right-border {
+        margin-left: 49px;
+    }
+
+    .plan-detail {
+        gap: 9px;
+    }
+
+    .cart {
+        width: 317px;
+    }
+
+    .client {
+        gap: 15px;
+    }
+}
+
 @media screen and (max-width: 991px) {
 
     .menu-icon {
@@ -816,6 +838,7 @@ footer {
 
     .mobile-nav.show {
         transform: scaleY(1);
+        top: 97px;
     }
 
     .navlink ul li a {
@@ -828,7 +851,12 @@ footer {
     }
 
     .main-content {
-        display: block;
+        display: flex;
+        gap: 38px;
+    }
+
+    .feature-content {
+        gap: 38px;
     }
 
     .carousel-cart {
@@ -857,10 +885,44 @@ footer {
         border: none;
     }
 
+    .vpn-infra {
+        gap: 0;
+        padding: 67px 55px;
+    }
+
+    .cart {
+        width: 330px;
+        margin-bottom: 30px;
+    }
+
+    .client {
+        display: block;
+    }
+
+
+    .right-border {
+        margin-left: 48px;
+    }
+
+    #subscribe-type p {
+        font-size: 22px;
+    }
+
+    .plan-detail{
+        display: block;
+    }
+
+    .footer-main-content{
+        display: block;
+    }
+
+    footer{
+        height: 1198px;
+    }
 
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 768px) {
     .container {
         padding: 0 15px;
     }
@@ -874,6 +936,10 @@ footer {
         display: block;
     }
 
+
+    .main-content {
+        display: block;
+    }
 
     .lasles-feature {
         display: block;
@@ -989,7 +1055,7 @@ footer {
         margin-bottom: 50px;
     }
 
-    .client-profile h5{
+    .client-profile h5 {
         padding-bottom: 11px;
     }
 }
