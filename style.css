@@ -313,8 +313,10 @@ nav {
     border: 2px solid #DDDDDD;
     border-radius: 10px;
     padding: 69px 50px 70px;
-    width: 330px;
-    height: 808px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .cart:hover {
@@ -338,12 +340,6 @@ nav {
     margin-top: 20px;
 }
 
-.plan-specs {
-    display: inline-block;
-    width: 190px;
-    height: 150px;
-}
-
 .plan-specs i {
     color: #2FAB73;
 }
@@ -363,7 +359,7 @@ nav {
 }
 
 .free-amount {
-    margin-top: 155px;
+    margin-top: auto;
 }
 
 .standard-plan {
@@ -371,11 +367,16 @@ nav {
 }
 
 .premium-plan {
-    margin-top: 47px;
+    margin-top: auto;
+}
+
+.plan-specs {
+    margin-bottom: 47px;
+    text-align: left;
 }
 
 #subscribe-type p {
-    font-size: 25px;
+    font-size: 22px;
     color: #0B132A;
     line-height: 30px;
     font-weight: 500;
@@ -390,7 +391,7 @@ nav {
     border: 2px solid #F53838;
     border-radius: 50px;
     padding: 13px 63px;
-    margin-bottom: 50px;
+    /* margin-bottom: 50px; */
     background-color: #fff;
     outline: none;
     font-size: 16px;
@@ -456,11 +457,12 @@ nav {
     text-align: center;
     margin-top: 7px;
     gap: 58px;
+    flex-wrap: wrap;
 }
 
 .client img {
-    width: 190px;
-    height: 130px;
+    width: 100%;
+    height: 100%;
     filter: grayscale(100%) brightness(200%) contrast(60%);
     opacity: 0.5;
 }
@@ -486,7 +488,9 @@ nav {
 }
 
 /* .slick-list {
-    overflow: visible
+    height: 250px !important;
+    display: flex !important;
+    align-items: center !important;
 } */
 
 .carousel-content {
@@ -501,6 +505,7 @@ nav {
 .slick-track {
     display: flex;
     gap: 50px;
+    height: 52% !important;
 }
 
 .carousel-cart {
@@ -762,6 +767,7 @@ footer {
     flex-direction: column;
     padding: 20px;
     z-index: 9999;
+    text-align: center;
 }
 
 .mobile-navlink ul li {
@@ -802,6 +808,10 @@ footer {
     font-size: 12px;
 }
 
+.social-client{
+    display: flex;
+    align-items: center;
+}
 
 @media screen and (max-width: 1024px) {
     .vpn-infra {
@@ -809,19 +819,7 @@ footer {
     }
 
     .right-border {
-        margin-left: 49px;
-    }
-
-    .plan-detail {
-        gap: 9px;
-    }
-
-    .cart {
-        width: 317px;
-    }
-
-    .client {
-        gap: 15px;
+        margin-left: 64px;
     }
 }
 
@@ -838,7 +836,19 @@ footer {
 
     .mobile-nav.show {
         transform: scaleY(1);
-        top: 97px;
+        align-items: normal;
+    }
+
+    .mobile-navlink button {
+        padding: 3px 22px;
+        outline: none;
+        border: 1px solid #F53855;
+        background-color: #fff;
+        border-radius: 50px;
+        color: #F53855;
+        font-weight: bold;
+        font-size: 15px;
+        cursor: pointer;
     }
 
     .navlink ul li a {
@@ -875,6 +885,10 @@ footer {
         margin: 0 -8px;
     }
 
+    .client img {
+        width: 100%;
+    }
+
 
     .mobile-hamburger {
         padding: 9px;
@@ -891,12 +905,17 @@ footer {
     }
 
     .cart {
-        width: 330px;
+        width: calc(50% - 25px);
         margin-bottom: 30px;
+        height: auto;
     }
 
     .client {
         display: block;
+    }
+
+    .navbar {
+        padding: 21px 0 21px 0;
     }
 
 
@@ -908,15 +927,16 @@ footer {
         font-size: 22px;
     }
 
-    .plan-detail{
+    .plan-detail {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .footer-main-content {
         display: block;
     }
 
-    .footer-main-content{
-        display: block;
-    }
-
-    footer{
+    footer {
         height: 1198px;
     }
 
@@ -933,7 +953,8 @@ footer {
     }
 
     .plan-detail {
-        display: block;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 
 
@@ -963,7 +984,7 @@ footer {
         display: block;
         margin-top: 44px;
         height: 368px;
-        padding: 41px 12px;
+        padding: 41px 16px;
     }
 
     .change-indicator-arrow i {
@@ -996,6 +1017,7 @@ footer {
 
     .cart {
         margin-bottom: 10px;
+        width: 100%;
     }
 
     .network-section {
